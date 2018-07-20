@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="OffProject1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mwv-IB-yv3">
+                                <rect key="frame" x="161" y="297" width="53" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Obe-TS-Kgo">
+                                <rect key="frame" x="169" y="372" width="36" height="30"/>
+                                <state key="normal" title="Send"/>
+                                <connections>
+                                    <action selector="revealMessage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WJz-7d-iRA"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What is your name?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TjV-Tr-UQI">
+                                <rect key="frame" x="117" y="334" width="141" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="TjV-Tr-UQI" firstAttribute="top" secondItem="mwv-IB-yv3" secondAttribute="bottom" constant="16" id="1H9-Vn-Zv6"/>
+                            <constraint firstItem="Obe-TS-Kgo" firstAttribute="top" secondItem="TjV-Tr-UQI" secondAttribute="bottom" constant="8" symbolic="YES" id="9jG-sD-Ogu"/>
+                            <constraint firstItem="mwv-IB-yv3" firstAttribute="centerX" secondItem="TjV-Tr-UQI" secondAttribute="centerX" id="BX9-gQ-3dP"/>
+                            <constraint firstItem="TjV-Tr-UQI" firstAttribute="centerX" secondItem="Obe-TS-Kgo" secondAttribute="centerX" id="TEd-7S-hcM"/>
+                            <constraint firstItem="TjV-Tr-UQI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="117" id="X6r-jw-qd0"/>
+                            <constraint firstItem="Obe-TS-Kgo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="m24-P5-cdq"/>
+                            <constraint firstItem="mwv-IB-yv3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="277" id="n6T-eZ-aJj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="collector" destination="TjV-Tr-UQI" id="NDS-tE-qML"/>
+                        <outlet property="message" destination="mwv-IB-yv3" id="dIL-Qc-Why"/>
+                        <outletCollection property="collector" destination="8bC-Xf-vdC" collectionClass="NSMutableArray" id="Vye-kd-Pip"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

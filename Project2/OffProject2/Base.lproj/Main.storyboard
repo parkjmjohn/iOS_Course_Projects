@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="OffProject2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Grocery Item:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TL1-6h-hci">
+                                <rect key="frame" x="16" y="67" width="104" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quanitity:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bNE-t6-Ro9">
+                                <rect key="frame" x="46" y="106" width="74" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Item" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IqD-it-dA5">
+                                <rect key="frame" x="128" y="58" width="231" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="#" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A50-Uu-PFb">
+                                <rect key="frame" x="128" y="101" width="73" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VMd-tp-Utd">
+                                <rect key="frame" x="16" y="158" width="104" height="21"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Grocery List:">
+                                        <attributes>
+                                            <font key="NSFont" size="17" name=".AppleSystemUIFontEmphasized"/>
+                                            <font key="NSOriginalFont" size="17" name=".AppleSystemUIFontEmphasized"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gF6-zY-8hY">
+                                <rect key="frame" x="228" y="100" width="30" height="30"/>
+                                <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="addItem:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Sa3-j3-fvl"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Mwz-ey-QoQ">
+                                <rect key="frame" x="16" y="187" width="343" height="460"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="A50-Uu-PFb" firstAttribute="leading" secondItem="bNE-t6-Ro9" secondAttribute="trailing" constant="8" symbolic="YES" id="13X-Oz-ewG"/>
+                            <constraint firstItem="bNE-t6-Ro9" firstAttribute="centerY" secondItem="A50-Uu-PFb" secondAttribute="centerY" id="3zW-72-1pI"/>
+                            <constraint firstItem="TL1-6h-hci" firstAttribute="leading" secondItem="VMd-tp-Utd" secondAttribute="leading" id="4As-90-tu5"/>
+                            <constraint firstItem="gF6-zY-8hY" firstAttribute="top" secondItem="IqD-it-dA5" secondAttribute="bottom" constant="12" id="6Wt-Cx-IX4"/>
+                            <constraint firstItem="IqD-it-dA5" firstAttribute="leading" secondItem="A50-Uu-PFb" secondAttribute="leading" id="ExK-aX-F4R"/>
+                            <constraint firstItem="VMd-tp-Utd" firstAttribute="top" secondItem="bNE-t6-Ro9" secondAttribute="bottom" constant="31" id="FQZ-85-fiS"/>
+                            <constraint firstItem="IqD-it-dA5" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="PB1-xm-zeC"/>
+                            <constraint firstItem="A50-Uu-PFb" firstAttribute="baseline" secondItem="gF6-zY-8hY" secondAttribute="baseline" id="f3p-Qb-ZBn"/>
+                            <constraint firstItem="IqD-it-dA5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="38" id="fle-Vx-ms2"/>
+                            <constraint firstItem="TL1-6h-hci" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="jDF-av-7LZ"/>
+                            <constraint firstItem="IqD-it-dA5" firstAttribute="centerX" secondItem="gF6-zY-8hY" secondAttribute="centerX" id="lOP-DE-Fhf"/>
+                            <constraint firstItem="bNE-t6-Ro9" firstAttribute="trailing" secondItem="VMd-tp-Utd" secondAttribute="trailing" id="nAM-Ri-uJ1"/>
+                            <constraint firstItem="IqD-it-dA5" firstAttribute="leading" secondItem="TL1-6h-hci" secondAttribute="trailing" constant="8" symbolic="YES" id="tPS-f0-Twh"/>
+                            <constraint firstItem="TL1-6h-hci" firstAttribute="bottom" secondItem="IqD-it-dA5" secondAttribute="bottom" id="vTi-VM-jqP"/>
+                            <constraint firstItem="gF6-zY-8hY" firstAttribute="leading" secondItem="A50-Uu-PFb" secondAttribute="trailing" constant="27" id="xOL-Ne-yZH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="input" destination="Mwz-ey-QoQ" id="98M-8e-TrD"/>
+                        <outlet property="item" destination="IqD-it-dA5" id="GH5-g3-NOt"/>
+                        <outlet property="number" destination="A50-Uu-PFb" id="7gf-4W-ckO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
